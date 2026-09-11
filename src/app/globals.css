@@ -1,0 +1,370 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --background: #0b131a;
+  --foreground: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #0582ca;
+  --accent-soft: rgba(5, 130, 202, 0.14);
+  --card: #161f26;
+  --line: #2a3742;
+  --primary: #006494;
+  --button-bg: rgba(22, 31, 38, 0.85);
+  --button-border: rgba(255, 255, 255, 0.15);
+  --button-text: #ffffff;
+  --button-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+  --button-shadow-hover: 0 12px 22px rgba(0, 0, 0, 0.42);
+  --button-shadow-active: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --background: #f4f5f7;
+  --foreground: #1d2305;
+  --muted: #64748b;
+  --accent: #006494;
+  --accent-soft: rgba(0, 53, 84, 0.08);
+  --card: #ffffff;
+  --line: #e2e8f0;
+  --primary: #003554;
+  --button-bg: rgba(255, 255, 255, 0.85);
+  --button-border: rgba(0, 0, 0, 0.08);
+  --button-text: #003554;
+  --button-shadow: 0 6px 12px rgba(15, 23, 41, 0.12);
+  --button-shadow-hover: 0 12px 22px rgba(15, 23, 41, 0.16);
+  --button-shadow-active: 0 3px 8px rgba(15, 23, 41, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-primary: var(--primary);
+  --font-sans: var(--font-geist-sans);
+  --animate-sun-spin: sun-spin 68s linear infinite;
+  --animate-sun-pulse: sun-pulse 10s ease-in-out infinite;
+  --animate-star-twinkle: star-twinkle 10s ease-in-out infinite;
+}
+
+@keyframes sun-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sun-pulse {
+  0%,
+  100% {
+    opacity: 0.62;
+  }
+  50% {
+    opacity: 0.82;
+  }
+}
+
+@keyframes sun-fly-away {
+  0% {
+    opacity: 0.62;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+  16% {
+    opacity: 0.95;
+    transform: translate3d(6px, -10px, 0) scale(1.12) rotate(-14deg);
+    filter: brightness(1.25);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(36px, -78vh, 0) scale(0.38) rotate(26deg);
+    filter: brightness(1.7);
+  }
+}
+
+@keyframes sun-enter {
+  0% {
+    opacity: 0;
+    transform: translate3d(36px, -78vh, 0) scale(0.38) rotate(26deg);
+    filter: brightness(1.7);
+  }
+  100% {
+    opacity: 0.62;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+}
+
+@keyframes star-twinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes star-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.15) translateY(10px);
+  }
+  68% {
+    opacity: 1;
+    transform: scale(1.35) translateY(0);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+@keyframes star-hide {
+  from {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.35);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+html[data-theme="light"] .theme-icon-sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.4);
+}
+
+html[data-theme="dark"] .theme-icon-moon,
+html:not([data-theme="light"]) .theme-icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.4);
+}
+
+.theme-sun {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  appearance: none;
+}
+
+html[data-theme="light"] .theme-sun {
+  visibility: visible;
+  opacity: 0.62;
+  transform: none;
+  pointer-events: auto;
+  cursor: pointer;
+  animation: sun-pulse 10s ease-in-out infinite;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.35s ease;
+}
+
+html[data-theme="light"]:not(.theme-to-light) .theme-sun:hover {
+  transform: scale(1.08);
+  filter: brightness(1.12);
+}
+
+html[data-theme="dark"] .theme-sun {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(36px, -78vh, 0) scale(0.38) rotate(26deg);
+}
+
+html.theme-to-dark[data-theme="dark"] .theme-sun {
+  visibility: visible;
+  z-index: 50;
+  pointer-events: none;
+  animation: sun-fly-away 1.05s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+html.theme-to-light[data-theme="light"] .theme-sun {
+  visibility: visible;
+  z-index: 50;
+  pointer-events: none;
+  animation: sun-enter 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.theme-stars {
+  pointer-events: none;
+}
+
+.theme-star {
+  display: flex;
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fde047;
+  appearance: none;
+  transform: translate(-50%, -50%);
+}
+
+.theme-star-glyph {
+  display: block;
+  pointer-events: none;
+}
+
+html[data-theme="light"] .theme-stars {
+  visibility: hidden;
+  opacity: 0;
+}
+
+html[data-theme="dark"] .theme-stars {
+  visibility: visible;
+  opacity: 1;
+}
+
+html[data-theme="dark"] .theme-star {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+html[data-theme="dark"]:not(.theme-to-dark):not(.theme-to-light) .theme-star-glyph {
+  animation: star-twinkle var(--star-duration, 10s) ease-in-out
+    var(--star-delay, 0s) infinite;
+}
+
+html[data-theme="dark"] .theme-star:hover .theme-star-glyph {
+  filter: brightness(1.4);
+  transform: scale(1.35);
+}
+
+html.theme-to-dark[data-theme="dark"] .theme-stars {
+  visibility: visible;
+  opacity: 1;
+}
+
+html.theme-to-dark[data-theme="dark"] .theme-star-glyph {
+  animation: star-pop 0.55s ease-out both;
+  animation-delay: calc(var(--star-index, 0) * 70ms + 280ms);
+}
+
+html.theme-to-light[data-theme="light"] .theme-stars {
+  visibility: visible;
+  opacity: 1;
+}
+
+html.theme-to-light[data-theme="light"] .theme-star {
+  pointer-events: none;
+}
+
+html.theme-to-light[data-theme="light"] .theme-star-glyph {
+  animation: star-hide 0.4s ease forwards;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  transition:
+    background-color 0.7s ease,
+    color 0.7s ease;
+}
+
+.redacted-name {
+  display: inline-block;
+  width: 5.2em;
+  height: 0.46em;
+  vertical-align: 0.08em;
+  border-radius: 2px;
+  background: #e2e8f0;
+}
+
+html[data-theme="light"] .redacted-name {
+  background: #0f172a;
+}
+
+html.theme-to-dark *,
+html.theme-to-light * {
+  transition:
+    background-color 0.7s ease,
+    color 0.7s ease,
+    border-color 0.7s ease,
+    box-shadow 0.7s ease,
+    outline-color 0.7s ease;
+}
+
+.store-cta {
+  position: relative;
+  z-index: 2;
+  background: var(--button-bg);
+  border-color: var(--button-border);
+  color: var(--button-text);
+  box-shadow: var(--button-shadow);
+  transition:
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 180ms ease,
+    filter 180ms ease,
+    background-color 0.7s ease,
+    color 0.7s ease,
+    border-color 0.7s ease;
+}
+
+.store-cta:hover {
+  transform: translateY(-2px) scale(1.015);
+  box-shadow: var(--button-shadow-hover);
+  filter: brightness(1.08);
+}
+
+.store-cta:active {
+  transform: translateY(1px) scale(0.975);
+  box-shadow: var(--button-shadow-active);
+  filter: brightness(0.94);
+}
+
+.store-cta:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  html.theme-to-dark *,
+  html.theme-to-light *,
+  .store-cta,
+  .store-cta:hover,
+  .store-cta:active,
+  .theme-icon-sun,
+  .theme-icon-moon,
+  html[data-theme="light"] .theme-sun {
+    transition: none;
+    animation: none;
+  }
+
+  .store-cta:hover,
+  .store-cta:active {
+    transform: none;
+  }
+
+  html.theme-to-dark[data-theme="dark"] .theme-sun,
+  html.theme-to-light[data-theme="light"] .theme-sun,
+  html[data-theme="dark"]:not(.theme-to-dark):not(.theme-to-light) .theme-star-glyph,
+  html.theme-to-dark[data-theme="dark"] .theme-star-glyph,
+  html.theme-to-light[data-theme="light"] .theme-star-glyph {
+    animation: none;
+  }
+}
