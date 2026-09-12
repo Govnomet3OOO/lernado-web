@@ -160,6 +160,7 @@ html:not([data-theme="light"]) .theme-icon-moon {
 }
 
 .theme-sun {
+  z-index: 1;
   padding: 0;
   border: 0;
   background: transparent;
@@ -205,6 +206,7 @@ html.theme-to-light[data-theme="light"] .theme-sun {
 }
 
 .theme-stars {
+  z-index: 1;
   pointer-events: none;
 }
 

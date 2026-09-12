@@ -11,7 +11,7 @@ export function SunGlow() {
       tabIndex={-1}
       aria-label="Switch to dark theme"
       title="Switch to dark theme"
-      className="theme-sun absolute -top-6 -right-8 h-[130px] w-[130px]"
+      className="theme-sun pointer-events-auto absolute top-2 right-[-8px] h-[130px] w-[130px] sm:right-2"
       onClick={() => {
         if (getTheme() === "light") {
           applyTheme("dark");

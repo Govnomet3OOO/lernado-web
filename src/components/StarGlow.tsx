@@ -16,7 +16,7 @@ const STARS = [
 
 export function StarGlow() {
   return (
-    <div className="theme-stars absolute inset-0">
+    <div className="theme-stars pointer-events-none absolute inset-0">
       {STARS.map((star, index) => (
         <button
           key={index}
@@ -24,7 +24,7 @@ export function StarGlow() {
           tabIndex={-1}
           aria-label="Switch to light theme"
           title="Switch to light theme"
-          className="theme-star absolute"
+          className="theme-star pointer-events-auto absolute"
           style={
             {
               top: star.top,

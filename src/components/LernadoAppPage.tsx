@@ -10,19 +10,20 @@ const product = products.lernado;
 export function LernadoAppPage() {
   return (
     <div className="relative">
-      <div className="relative mx-auto w-full max-w-lg px-6 pb-20 pt-8 sm:px-8">
+      <div className="pointer-events-none absolute inset-0 z-[1] overflow-visible">
         <SunGlow />
         <StarGlow />
+      </div>
 
-        <div className="relative z-10 pointer-events-none [&_a]:pointer-events-auto [&_button]:pointer-events-auto">
-          <p>
-            <Link
-              href={paths.home}
-              className="text-sm font-semibold text-muted transition-colors hover:text-primary"
-            >
-              All apps
-            </Link>
-          </p>
+      <div className="relative z-[2] mx-auto w-full max-w-lg px-6 pb-20 pt-8 sm:px-8">
+        <p>
+          <Link
+            href={paths.home}
+            className="text-sm font-semibold text-muted transition-colors hover:text-primary"
+          >
+            All apps
+          </Link>
+        </p>
 
           <section className="pt-14 sm:pt-16">
             <p className="text-xl font-bold tracking-tight text-foreground">
@@ -77,7 +78,6 @@ export function LernadoAppPage() {
               Privacy Policy
             </Link>
           </nav>
-        </div>
       </div>
     </div>
   );
