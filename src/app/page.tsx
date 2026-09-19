@@ -15,17 +15,22 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="mx-auto w-full max-w-3xl px-5">
-      <section className="flex flex-col items-center py-20 text-center sm:py-24">
-        <div className="relative isolate inline-block text-4xl sm:text-5xl">
-          <Logo className="pointer-events-none absolute top-1/2 left-0 -z-10 h-[3cap] w-auto max-w-none -translate-x-[8%] -translate-y-[33%]" />
+      <section className="relative isolate flex flex-col items-center py-20 text-center sm:py-24">
+        <div className="relative text-4xl sm:text-5xl">
+          <Logo
+            src="/logo-beam.png"
+            width={300}
+            height={136}
+            className="pointer-events-none absolute top-1/2 -left-[2.2em] -z-10 h-[4cap] w-auto max-w-none -translate-y-[28%]"
+          />
           <h1 className="relative z-10 font-semibold leading-none tracking-tight text-foreground">
             {site.name}
           </h1>
         </div>
-        <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-accent">
+        <p className="relative z-10 mt-4 text-sm font-medium uppercase tracking-[0.18em] text-accent">
           {site.tagline}
         </p>
-        <p className="mt-5 max-w-md text-[17px] leading-7 text-muted">
+        <p className="relative z-10 mt-5 max-w-md text-[17px] leading-7 text-muted">
           Focused apps for learning English. Start with vocabulary.
           Stories come next.
         </p>

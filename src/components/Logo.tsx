@@ -1,14 +1,22 @@
 type LogoProps = {
   className?: string;
+  src?: string;
+  width?: number;
+  height?: number;
 };
 
-export function Logo({ className }: LogoProps) {
+export function Logo({
+  className,
+  src = "/logo.svg",
+  width = 345,
+  height = 157,
+}: LogoProps) {
   return (
     <img
-      src="/logo.svg"
+      src={src}
       alt=""
-      width={345}
-      height={157}
+      width={width}
+      height={height}
       className={["block", className].filter(Boolean).join(" ")}
       aria-hidden="true"
     />
