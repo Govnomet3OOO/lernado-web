@@ -5,10 +5,10 @@ type LogoProps = {
 export function Logo({ className }: LogoProps) {
   return (
     <img
-      src="/logo.png"
+      src="/logo.svg"
       alt=""
-      width={149}
-      height={150}
+      width={345}
+      height={157}
       className={["block", className].filter(Boolean).join(" ")}
       aria-hidden="true"
     />

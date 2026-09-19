@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 345.41 157.07">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_Безымянный_градиент_12);
+      }
+
+      .cls-2 {
+        fill: #d14a43;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill: none;
+        stroke-miterlimit: 1.8;
+      }
+
+      .cls-3, .cls-5, .cls-8 {
+        stroke-width: 1.12px;
+      }
+
+      .cls-3, .cls-6 {
+        stroke: #2a303b;
+      }
+
+      .cls-4 {
+        stroke-width: .81px;
+      }
+
+      .cls-4, .cls-5, .cls-7, .cls-8 {
+        stroke: #465468;
+      }
+
+      .cls-5 {
+        stroke-linecap: round;
+      }
+
+      .cls-6, .cls-7 {
+        stroke-width: .9px;
+      }
+
+      .cls-9 {
+        fill: #fff;
+      }
+
+      .cls-10 {
+        fill: #2a303b;
+      }
+
+      .cls-11 {
+        fill: #f5db55;
+      }
+
+      .cls-12 {
+        fill: url(#_Безымянный_градиент_2);
+      }
+
+      .cls-13 {
+        fill: url(#_Безымянный_градиент_3);
+      }
+
+      .cls-14 {
+        fill: #ab4f46;
+      }
+
+      .cls-15 {
+        fill: #e6a3a7;
+      }
+
+      .cls-16 {
+        fill: #384455;
+      }
+    </style>
+    <linearGradient id="_Безымянный_градиент_12" data-name="Безымянный градиент 12" x1="40.98" y1="-769.86" x2="471.23" y2="-769.86" gradientTransform="translate(-3.97 -157.85) scale(.74 -.27)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f5db55" stop-opacity="0"/>
+      <stop offset=".03" stop-color="#f5db55" stop-opacity="0"/>
+      <stop offset=".05" stop-color="#f5db55" stop-opacity=".28"/>
+      <stop offset=".35" stop-color="#e69e44" stop-opacity=".08"/>
+      <stop offset=".7" stop-color="#e69e44" stop-opacity="0"/>
+      <stop offset="1" stop-color="#e69e44" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_2" data-name="Безымянный градиент 2" x1="-8.78" y1="-1139.6" x2="310.47" y2="-1139.6" gradientTransform="translate(34.82 -188.56) scale(.96 -.21)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fdfce8" stop-opacity="0"/>
+      <stop offset=".03" stop-color="#fdfce8" stop-opacity="0"/>
+      <stop offset=".05" stop-color="#fdfce8" stop-opacity=".95"/>
+      <stop offset=".18" stop-color="#f8ec8e" stop-opacity=".7"/>
+      <stop offset=".4" stop-color="#f5db55" stop-opacity=".22"/>
+      <stop offset=".65" stop-color="#e69e44" stop-opacity=".06"/>
+      <stop offset=".85" stop-color="#e69e44" stop-opacity="0"/>
+      <stop offset="1" stop-color="#e69e44" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="_Безымянный_градиент_3" data-name="Безымянный градиент 3" cx="320.95" cy="-357.71" fx="320.95" fy="-357.71" r="28" gradientTransform="translate(-238.51 -207.87) scale(.83 -.72)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fdfce8" stop-opacity=".7"/>
+      <stop offset=".3" stop-color="#f8ec8e" stop-opacity=".4"/>
+      <stop offset=".6" stop-color="#f5db55" stop-opacity=".15"/>
+      <stop offset=".85" stop-color="#e69e44" stop-opacity=".04"/>
+      <stop offset="1" stop-color="#e69e44" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="_Слой_2" data-name="Слой 2">
+    <g>
+      <g id="g20">
+        <path id="path19" class="cls-1" d="M26.41,51.3L340.09,0c7.1,33.91,7.1,68.68,0,102.59L26.41,51.3Z"/>
+        <path id="path20" class="cls-12" d="M26.41,51.3l303.77-29.49c2.33,19.61,2.33,39.37,0,58.98L26.41,51.3Z"/>
+      </g>
+      <line id="line20" class="cls-5" x1="26.41" y1="5.65" x2="26.41" y2="21.59"/>
+      <ellipse id="circle20" class="cls-2" cx="26.41" cy="15.79" rx="3.3" ry="2.9"/>
+      <ellipse id="circle21" class="cls-15" cx="26.41" cy="15.79" rx="1.65" ry="1.45"/>
+      <path id="path21" class="cls-2" d="M9.91,36.08c0-13.04,33.02-13.04,33.02,0H9.91Z"/>
+      <rect id="rect21" class="cls-14" x="8.25" y="35.36" width="36.32" height="3.62" rx=".9" ry=".9"/>
+      <rect id="rect22" class="cls-11" x="13.21" y="38.98" width="26.41" height="24.63"/>
+      <line id="line22" class="cls-6" x1="19.81" y1="38.98" x2="19.81" y2="63.61"/>
+      <line id="line23" class="cls-3" x1="26.41" y1="38.98" x2="26.41" y2="63.61"/>
+      <line id="line24" class="cls-6" x1="33.02" y1="38.98" x2="33.02" y2="63.61"/>
+      <line id="line25" class="cls-6" x1="13.21" y1="51.3" x2="39.62" y2="51.3"/>
+      <rect id="rect25" class="cls-6" x="13.21" y="38.98" width="26.41" height="24.63"/>
+      <rect id="rect26" class="cls-16" y="63.61" width="52.83" height="5.8" rx=".9" ry=".9"/>
+      <line id="line26" class="cls-8" y1="52.02" x2="52.83" y2="52.02"/>
+      <line id="line27" class="cls-7" y1="57.82" x2="52.83" y2="57.82"/>
+      <line id="line28" class="cls-4" x1=".83" y1="52.02" x2=".83" y2="63.61"/>
+      <line id="line29" class="cls-4" x1="7.43" y1="52.02" x2="7.43" y2="63.61"/>
+      <line id="line30" class="cls-4" x1="14.03" y1="52.02" x2="14.03" y2="63.61"/>
+      <line id="line31" class="cls-4" x1="20.64" y1="52.02" x2="20.64" y2="63.61"/>
+      <line id="line32" class="cls-4" x1="26.41" y1="52.02" x2="26.41" y2="63.61"/>
+      <line id="line33" class="cls-4" x1="32.19" y1="52.02" x2="32.19" y2="63.61"/>
+      <line id="line34" class="cls-4" x1="38.8" y1="52.02" x2="38.8" y2="63.61"/>
+      <line id="line35" class="cls-4" x1="45.4" y1="52.02" x2="45.4" y2="63.61"/>
+      <line id="line36" class="cls-4" x1="52" y1="52.02" x2="52" y2="63.61"/>
+      <path id="path36" class="cls-10" d="M1.65,69.41l9.91,11.59v-11.59H1.65Z"/>
+      <path id="path37" class="cls-10" d="M51.18,69.41l-9.91,11.59v-11.59h9.91Z"/>
+      <path id="path38" class="cls-9" d="M10.73,69.41h31.37l2.48,40.57H8.25l2.48-40.57Z"/>
+      <path id="path39" class="cls-10" d="M23.11,89.69c0-1.6,1.48-2.9,3.3-2.9s3.3,1.3,3.3,2.9v9.42h-6.6v-9.42Z"/>
+      <path id="path40" class="cls-2" d="M8.25,109.98h36.32l3.3,47.09H4.95l3.3-47.09Z"/>
+      <ellipse id="circle48" class="cls-13" cx="26.41" cy="51.3" rx="23.11" ry="20.29"/>
+    </g>
+  </g>
+</svg>

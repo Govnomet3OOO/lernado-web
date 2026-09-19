@@ -16,10 +16,12 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-3xl px-5">
       <section className="flex flex-col items-center py-20 text-center sm:py-24">
-        <h1 className="relative isolate inline-flex items-baseline text-4xl font-semibold leading-none tracking-tight text-foreground sm:text-5xl">
-          <Logo className="pointer-events-none relative -z-10 h-[3cap] w-auto shrink-0 -mr-[1.55em]" />
-          <span className="relative z-10">{site.name}</span>
-        </h1>
+        <div className="relative isolate inline-block text-4xl sm:text-5xl">
+          <Logo className="pointer-events-none absolute top-1/2 left-0 -z-10 h-[3cap] w-auto max-w-none -translate-x-[8%] -translate-y-[33%]" />
+          <h1 className="relative z-10 font-semibold leading-none tracking-tight text-foreground">
+            {site.name}
+          </h1>
+        </div>
         <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-accent">
           {site.tagline}
         </p>
