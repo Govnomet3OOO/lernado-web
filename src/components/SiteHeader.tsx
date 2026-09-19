@@ -15,7 +15,12 @@ export function SiteHeader() {
           aria-label={`${site.name} home`}
           className="flex items-center text-foreground"
         >
-          <Logo className="h-8 w-auto" />
+          <Logo
+            src="/logo-mark.png"
+            width={52}
+            height={150}
+            className="h-8 w-auto"
+          />
         </Link>
         <div className="flex items-center gap-3 sm:gap-5">
           <nav aria-label="Apps" className="flex items-center gap-5 text-sm">
