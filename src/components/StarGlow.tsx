@@ -5,13 +5,13 @@ import type { CSSProperties } from "react";
 import { applyTheme, getTheme } from "../lib/theme";
 
 const STARS = [
-  { top: "8%", left: "78%", size: 16, type: "cross" as const, delay: "0s", duration: "10s" },
-  { top: "18%", left: "92%", size: 6, type: "dot" as const, delay: "1.2s", duration: "8.5s" },
-  { top: "4%", left: "64%", size: 5, type: "dot" as const, delay: "2.8s", duration: "11s" },
-  { top: "28%", left: "86%", size: 14, type: "cross" as const, delay: "0.6s", duration: "9.5s" },
-  { top: "22%", left: "58%", size: 5, type: "dot" as const, delay: "2s", duration: "12s" },
-  { top: "12%", left: "96%", size: 18, type: "cross" as const, delay: "0.9s", duration: "10.5s" },
-  { top: "36%", left: "72%", size: 6, type: "dot" as const, delay: "2.4s", duration: "9s" },
+  { top: "10%", left: "82%", size: 18, type: "cross" as const, delay: "0s", duration: "10s" },
+  { top: "22%", left: "90%", size: 8, type: "dot" as const, delay: "1.2s", duration: "8.5s" },
+  { top: "8%", left: "70%", size: 7, type: "dot" as const, delay: "2.8s", duration: "11s" },
+  { top: "32%", left: "86%", size: 16, type: "cross" as const, delay: "0.6s", duration: "9.5s" },
+  { top: "18%", left: "74%", size: 6, type: "dot" as const, delay: "2s", duration: "12s" },
+  { top: "14%", left: "94%", size: 20, type: "cross" as const, delay: "0.9s", duration: "10.5s" },
+  { top: "40%", left: "78%", size: 8, type: "dot" as const, delay: "2.4s", duration: "9s" },
 ];
 
 export function StarGlow() {

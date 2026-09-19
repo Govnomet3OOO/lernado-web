@@ -63,16 +63,16 @@ html[data-theme="light"] {
 @keyframes sun-pulse {
   0%,
   100% {
-    opacity: 0.62;
+    opacity: 0.85;
   }
   50% {
-    opacity: 0.82;
+    opacity: 1;
   }
 }
 
 @keyframes sun-fly-away {
   0% {
-    opacity: 0.62;
+    opacity: 0.85;
     transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
     filter: brightness(1);
   }
@@ -95,7 +95,7 @@ html[data-theme="light"] {
     filter: brightness(1.7);
   }
   100% {
-    opacity: 0.62;
+    opacity: 0.85;
     transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
     filter: brightness(1);
   }
@@ -169,7 +169,7 @@ html:not([data-theme="light"]) .theme-icon-moon {
 
 html[data-theme="light"] .theme-sun {
   visibility: visible;
-  opacity: 0.62;
+  opacity: 0.85;
   transform: none;
   pointer-events: auto;
   cursor: pointer;

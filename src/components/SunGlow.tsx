@@ -11,14 +11,14 @@ export function SunGlow() {
       tabIndex={-1}
       aria-label="Switch to dark theme"
       title="Switch to dark theme"
-      className="theme-sun pointer-events-auto absolute top-2 right-[-8px] h-[130px] w-[130px] sm:right-2"
+      className="theme-sun pointer-events-auto absolute top-6 right-4 h-[150px] w-[150px] sm:right-10"
       onClick={() => {
         if (getTheme() === "light") {
           applyTheme("dark");
         }
       }}
     >
-      <svg className="absolute inset-0" width="130" height="130" viewBox="0 0 130 130">
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 130 130">
         <defs>
           <radialGradient id="lernado-sun-glow" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#FDE047" stopOpacity="0.65" />
@@ -30,9 +30,7 @@ export function SunGlow() {
         <circle cx="65" cy="65" r="60" fill="url(#lernado-sun-glow)" />
       </svg>
       <svg
-        className="theme-sun-rays absolute inset-0 origin-center motion-safe:animate-sun-spin"
-        width="130"
-        height="130"
+        className="theme-sun-rays absolute inset-0 h-full w-full origin-center motion-safe:animate-sun-spin"
         viewBox="0 0 130 130"
       >
         {RAYS.map((angle) => {
@@ -52,7 +50,7 @@ export function SunGlow() {
           );
         })}
       </svg>
-      <svg className="absolute inset-0" width="130" height="130" viewBox="0 0 130 130">
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 130 130">
         <defs>
           <radialGradient id="lernado-sun-core" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#FEF08A" stopOpacity="0.88" />

@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
+import { SkyDecorations } from "../components/SkyDecorations";
 import { site } from "../lib/site";
 import { THEME_STORAGE_KEY } from "../lib/theme";
 import "./globals.css";
@@ -37,8 +38,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="flex min-h-full flex-col font-sans">
+        <SkyDecorations />
         <SiteHeader />
-        <main className="flex-1">{children}</main>
+        <main className="relative flex-1">{children}</main>
         <SiteFooter />
       </body>
     </html>
