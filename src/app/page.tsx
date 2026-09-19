@@ -21,7 +21,7 @@ export default function Home() {
             src="/logo-beam.png"
             width={300}
             height={136}
-            className="pointer-events-none absolute top-1/2 -left-[2.2em] -z-10 h-[4cap] w-auto max-w-none -translate-y-[28%] translate-x-[10px] [clip-path:inset(0_0_10px_0)]"
+            className="pointer-events-none absolute top-1/2 -left-[2.2em] -z-10 h-[4cap] w-auto max-w-none -translate-y-[28%] translate-x-[10px] [clip-path:inset(0_0_30px_0)]"
           />
           <h1 className="relative z-10 font-semibold leading-none tracking-tight text-foreground">
             {site.name}
