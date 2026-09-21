@@ -277,12 +277,17 @@ export default function LernadoPrivacyPage() {
       title: "Account deletion",
       content: (
         <p>
-          You can delete your account in the app. That removes your
-          authentication account and related server records we control, and
-          clears local learning data on that device. You can also email{" "}
-          <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a> to
-          request deletion. After deletion you can register again with the same
-          email if you choose.
+          You can delete your account in the app, or on the{" "}
+          <Link href={product.deleteAccountHref}>account deletion page</Link>{" "}
+          at {site.host}. That removes your authentication account and related
+          server records we control, and clears local learning data on that
+          device if you delete from the app. The website form confirms your
+          email with a one-time code, then asks why you are leaving. Those
+          answers are stored without your email or account id. You can also
+          email{" "}
+          <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
+          After deletion you can register again with the same email if you
+          choose.
         </p>
       ),
     },
@@ -318,7 +323,9 @@ export default function LernadoPrivacyPage() {
           or delete personal data, or to object to certain processing. Contact
           us at{" "}
           <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>. You
-          can also delete your account in the app as described above.
+          can also delete your account in the app or on the{" "}
+          <Link href={product.deleteAccountHref}>account deletion page</Link>{" "}
+          as described above.
         </p>
       ),
     },

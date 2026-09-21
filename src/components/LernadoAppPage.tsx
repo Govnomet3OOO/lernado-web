@@ -55,7 +55,7 @@ export function LernadoAppPage() {
 
       <nav
         aria-label={`${product.name} legal`}
-        className="mt-16 flex gap-5 text-sm font-semibold text-muted"
+        className="mt-16 flex flex-wrap gap-5 text-sm font-semibold text-muted"
       >
         <Link
           href={product.termsHref}
@@ -69,6 +69,14 @@ export function LernadoAppPage() {
         >
           Privacy Policy
         </Link>
+        {product.deleteAccountHref ? (
+          <Link
+            href={product.deleteAccountHref}
+            className="transition-colors hover:text-primary"
+          >
+            Delete account
+          </Link>
+        ) : null}
       </nav>
     </div>
   );

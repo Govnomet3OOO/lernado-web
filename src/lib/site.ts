@@ -9,7 +9,7 @@ export const site = {
   contactEmail: "hello@lernado.co",
   governingLaw:
     "the laws of the United States and of the state in which the developer resides",
-  lastUpdated: "September 11, 2026",
+  lastUpdated: "September 21, 2026",
   copyrightYear: 2026,
 } as const;
 

@@ -225,7 +225,9 @@ export default function LernadoTermsPage() {
       title: "Termination",
       content: (
         <p>
-          You may stop using the app and delete your account in the app.
+          You may stop using the app and delete your account in the app or on
+          the{" "}
+          <Link href={product.deleteAccountHref}>account deletion page</Link>.
           Deleting your account does not cancel a subscription on its own —
           cancel that in the store you bought it from. We may suspend or
           terminate access if you violate these Terms or if we discontinue the
