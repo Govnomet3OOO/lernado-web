@@ -10,27 +10,6 @@ const product = products.lernado;
 const storeButtonClass =
   "store-cta inline-flex h-14 w-full cursor-pointer items-center justify-center rounded-[32px] border px-8 text-base font-bold tracking-[-0.02em] select-none sm:w-auto sm:min-w-72";
 
-const cardNotes = [
-  {
-    title: "Hear it",
-    body: "American English pronunciation, plus each verb form with its own sound.",
-  },
-  {
-    title: "Read it",
-    body: "A plain definition, and an example where the word is already doing the work.",
-  },
-  {
-    title: "Keep or skip",
-    body: "Swipe on. Mark a word you know, or hold onto it and learn it.",
-  },
-] as const;
-
-const dialoguePoints = [
-  "Play the question back before you answer",
-  "The phrase stays pinned while you write",
-  "The sentence is checked as soon as you send it",
-] as const;
-
 const featureMarks: Record<string, ReactNode> = {
   "Daily repetitions": <RepeatIcon />,
   "Your dictionaries": <BooksIcon />,
@@ -76,69 +55,41 @@ export function LernadoAppPage() {
         <article>
           <PhoneShot
             src="/lernado/word-card.png"
-            alt="Lernado word card for explain, with pronunciation, verb forms, a definition, and an example sentence."
+            alt="A Lernado word card with pronunciation, meaning, and an example."
             width={720}
             height={1426}
             priority
           />
           <h2 className="mt-6 text-xl font-bold tracking-[-0.03em] text-foreground">
-            Meet it on the card
+            Meet the word
           </h2>
-          <ul className="mt-5 space-y-4">
-            {cardNotes.map((note) => (
-              <li key={note.title}>
-                <h3 className="text-[15px] font-semibold tracking-tight text-foreground">
-                  {note.title}
-                </h3>
-                <p className="mt-1 text-sm leading-6 text-muted">{note.body}</p>
-              </li>
-            ))}
-          </ul>
+          <p className="mt-3 max-w-sm text-sm leading-6 text-muted">
+            Sound, meaning, and a sentence to lean on — before you have to use
+            it yourself.
+          </p>
         </article>
 
         <article>
           <PhoneShot
             src="/lernado/dialogue.png"
-            alt="Lernado dialogue asking for the phrase take on in a reply, with the sentence being checked."
+            alt="A Lernado dialogue where you use a new phrase in your own reply."
             width={720}
             height={1422}
             late
           />
           <h2 className="mt-6 text-xl font-bold tracking-[-0.03em] text-foreground">
-            Use it in a reply
+            Then use it
           </h2>
-          <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent-soft px-3 py-1 text-sm font-semibold text-foreground">
-            take on
-            <span className="font-medium text-muted">in your reply</span>
+          <p className="mt-3 max-w-sm text-sm leading-6 text-muted">
+            A short conversation puts the word in a real situation. You answer
+            in your own sentence.
           </p>
-          <p className="mt-4 text-sm leading-6 text-muted">
-            A question sets a real situation — a busy week, a supervisor, a
-            schedule. The phrase you need stays on screen. You write the line.
-            Lernado checks it.
-          </p>
-          <ul className="mt-5 space-y-3">
-            {dialoguePoints.map((point) => (
-              <li key={point} className="flex gap-3 text-sm leading-6 text-muted">
-                <span
-                  aria-hidden="true"
-                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
-                />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
         </article>
       </div>
 
-      <figure className="mx-auto mt-16 max-w-xl text-center sm:mt-20">
-        <blockquote className="text-[26px] font-medium leading-snug tracking-[-0.03em] text-foreground sm:text-3xl">
-          “Can you <span className="text-accent">explain</span> this grammar rule
-          to me?”
-        </blockquote>
-        <figcaption className="mt-4 text-sm text-muted">
-          The example already waiting on the card
-        </figcaption>
-      </figure>
+      <p className="mx-auto mt-16 max-w-xl text-center text-[26px] font-medium leading-snug tracking-[-0.03em] text-foreground sm:mt-20 sm:text-3xl">
+        A word you have used is a word you keep.
+      </p>
 
       <section className="mt-16 border-t border-line pt-14 sm:mt-20 sm:pt-16">
         <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-accent">
