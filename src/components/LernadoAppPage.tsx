@@ -32,13 +32,25 @@ export function LernadoAppPage() {
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
           {product.tagline}
         </p>
-        <p className="mt-6 text-xl font-bold tracking-tight text-foreground">
-          Welcome to
-        </p>
-        <h1 className="mt-1.5 text-[44px] font-extrabold leading-none tracking-[-0.06em] text-foreground sm:text-6xl">
-          {product.name}
-        </h1>
-        <div className="mx-auto mt-3.5 h-[3px] w-9 rounded-sm bg-primary/70" />
+        <div className="mt-6 flex items-center justify-center gap-4 text-left">
+          <img
+            src="/lernado-icon.png"
+            alt=""
+            width={1024}
+            height={1024}
+            className="size-20 shrink-0 rounded-[18px]"
+            aria-hidden="true"
+          />
+          <div>
+            <p className="text-xl font-bold tracking-tight text-foreground">
+              Welcome to
+            </p>
+            <h1 className="mt-1.5 text-[44px] font-extrabold leading-none tracking-[-0.06em] text-foreground sm:text-6xl">
+              {product.name}
+            </h1>
+            <div className="mt-3.5 h-[3px] w-9 rounded-sm bg-primary/70" />
+          </div>
+        </div>
         <p className="mt-3 text-[17px] font-semibold leading-snug text-foreground">
           Smart vocabulary trainer
         </p>
