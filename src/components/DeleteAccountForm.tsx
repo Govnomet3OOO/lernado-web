@@ -85,6 +85,9 @@ export function DeleteAccountForm() {
     setBusy(false);
     if (!result.ok) {
       setError(deletionErrorMessage(result.error));
+      if (result.error === "expired" || result.error === "locked") {
+        setStage("code");
+      }
       return;
     }
     setStage("done");
