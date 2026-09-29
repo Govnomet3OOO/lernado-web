@@ -33,7 +33,7 @@ export const products = {
     href: "/lernado",
     status: "coming-soon",
     statusLabel: "Google Play · Coming soon",
-    packageName: "com.lernado.app",
+    packageName: "com.lernado.vocab",
     termsHref: "/lernado/terms",
     privacyHref: "/lernado/privacy",
     deleteAccountHref: "/lernado/delete-account",

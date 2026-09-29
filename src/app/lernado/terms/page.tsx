@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: `Terms of Use for the ${product.name} mobile app (${product.packageName}).`,
 };
 
-const lastUpdatedLabel = `Last updated ${site.lastUpdated}`;
+const lastUpdatedLabel = "Last updated September 29, 2026";
 
 export default function LernadoTermsPage() {
   const sections: LegalSection[] = [
@@ -145,7 +145,13 @@ export default function LernadoTermsPage() {
       content: (
         <>
           <p>
-            The app is free to install. Some features may require a one-time
+            During closed testing, tester-code access is free. Activating it
+            does not create a payment, trial subscription, or automatic renewal.
+            Purchases are unavailable in this test version. Tester access may
+            end or change when testing ends; we will not charge you automatically.
+          </p>
+          <p>
+            The app is free to install. After testing, some features may require a one-time
             purchase or a subscription. We show the price and what you get
             before you pay, and a subscription renews until you cancel it.
           </p>

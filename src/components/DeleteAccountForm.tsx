@@ -98,9 +98,9 @@ export function DeleteAccountForm() {
         </h2>
         <p className="mt-2 text-base leading-[22px] text-muted">
           The Lernado account for {email} and the server records tied to it are
-          gone. Learning data on a phone is cleared when you delete the account
-          in the app or uninstall. A Google Play subscription is cancelled in
-          the store, not here.
+          removed from the live service. To remove any remaining local copy on
+          a phone, clear the app data or uninstall. Backup copies may remain for
+          up to 30 days and correspondence about this request for up to 90 days.
         </p>
       </div>
     );

@@ -33,7 +33,15 @@ export default function LernadoDeleteAccountPage() {
         <div className="mt-3.5 h-[3px] w-9 rounded-sm bg-primary/70" />
         <p className="mt-3 max-w-sm text-base leading-[22px] text-muted">
           Confirm the email on your {product.name} account, enter the code we
-          send, then permanently delete the account and its server data.
+          send, then permanently delete the account, synced learning progress,
+          and personal dictionaries from the live service. Backups may remain
+          for up to 30 days, and correspondence about the completed request for
+          up to 90 days. To remove a local copy on an offline device, clear the
+          app data or uninstall. See our{" "}
+          <Link href={product.privacyHref} className="underline hover:text-primary">
+            Privacy Policy
+          </Link>{" "}
+          for details.
         </p>
       </section>
 

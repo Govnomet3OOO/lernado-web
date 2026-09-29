@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: `Privacy Policy for the ${product.name} mobile app (${product.packageName}).`,
 };
 
-const lastUpdatedLabel = `Last updated ${site.lastUpdated}`;
+const lastUpdatedLabel = "Last updated September 29, 2026";
 
 export default function LernadoPrivacyPage() {
   const sections: LegalSection[] = [
@@ -68,8 +68,9 @@ export default function LernadoPrivacyPage() {
             </li>
             <li>
               <strong>Learning data:</strong> progress, XP, streaks, daily
-              goals, dictionaries, and words you add, stored primarily on your
-              device.
+              goals, dictionaries, and words you add. For signed-in accounts,
+              this data is stored in our cloud backend and cached on your device
+              so it can sync across devices.
             </li>
             <li>
               <strong>User content for AI:</strong> words, translations,
@@ -81,9 +82,12 @@ export default function LernadoPrivacyPage() {
               to those requests.
             </li>
             <li>
-              <strong>Technical data:</strong> information needed to run the
-              app (for example app version) when you communicate with our
-              backend.
+              <strong>Technical data:</strong> app version, build number,
+              operating system version, and filtered error stack traces used to
+              investigate crashes and app freezes. Our Sentry configuration
+              removes account identifiers, learner text, authentication tokens,
+              and request bodies from error reports. We do not enable session
+              replay, screenshots, or advertising tracking.
             </li>
           </ul>
         </>
@@ -148,9 +152,8 @@ export default function LernadoPrivacyPage() {
           We email you only to run your account: sign-in codes and magic links,
           purchase and account notices, security messages, and replies to
           support you start. We do not send newsletters or promotional mail
-          about this app or any other app. If we ever need an email delivery
-          provider for those service messages, it would act only on our behalf
-          and would not be allowed to market to you.
+          about this app or any other app. Email providers send service
+          messages on our behalf and are not authorized to market to you.
         </p>
       ),
     },
@@ -180,12 +183,13 @@ export default function LernadoPrivacyPage() {
       title: "Payments",
       content: (
         <p>
-          Paid features are sold through <strong>Google Play</strong>. Google
-          processes the payment and keeps your payment details; we receive the
-          fact that a purchase happened and what it entitles you to, which we
-          store with your account. If we later sell through other stores or
-          payment providers, such as a web checkout, those providers will handle
-          payment details in the same way and we will name them here.
+          During closed testing, access is free through the tester activation
+          code; no payment or subscription is created. Purchases are not
+          available in this test version. When paid features launch on Android,
+          payments will be processed by <strong>Google Play</strong>. Google
+          will keep payment details; we will receive the purchase entitlement
+          needed to provide access. We will update this policy if we introduce
+          another payment provider.
         </p>
       ),
     },
@@ -198,10 +202,11 @@ export default function LernadoPrivacyPage() {
           <ul>
             <li>
               <strong>Supabase</strong> — account, authentication, and backend
-              records (including profile data tied to your account).
+              records, including profiles, personal dictionaries, learning
+              progress, settings, and synchronization records tied to your account.
             </li>
             <li>
-              <strong>Google</strong> — Google Sign-In, Google Play billing, and
+              <strong>Google</strong> — Google Sign-In, future Google Play billing, and
               Google Gemini, which processes prompts and learner text for card
               translations, sentence checking, and mini-dialogs.
             </li>
@@ -210,8 +215,13 @@ export default function LernadoPrivacyPage() {
               Datamuse, and dictionaryapi.dev receive the word you look up.
             </li>
             <li>
-              <strong>An email delivery provider</strong>, if we send account
-              email such as sign-in codes through one.
+              <strong>Sentry</strong> — filtered crash and app-freeze reports
+              to help us find and fix errors. Our Sentry organization stores
+              these reports in the United States.
+            </li>
+            <li>
+              <strong>Resend</strong> — service email for website account-deletion
+              codes and notifications to the developer.
             </li>
           </ul>
           <p>
@@ -240,10 +250,11 @@ export default function LernadoPrivacyPage() {
       title: "Data on your device",
       content: (
         <p>
-          Learning progress and settings are stored locally on your device,
-          including in a local database. Uninstalling the app removes that local
-          data. Server-side account data is not removed until you delete your
-          account.
+          The app keeps a local database of learning content, progress, and
+          settings. Signed-in learning data also syncs to our cloud backend.
+          Uninstalling the app does not delete your cloud account or its synced
+          progress. Demo data and changes that have not synced may be lost if
+          you clear the app data or uninstall.
         </p>
       ),
     },
@@ -264,11 +275,15 @@ export default function LernadoPrivacyPage() {
       title: "Retention",
       content: (
         <p>
-          Account data is kept until you delete your account. Local learning
-          data remains on the device until you clear it, delete the account from
-          the app, or uninstall. Prompts sent to AI providers are processed to
-          generate a response. Purchase records may be kept longer where tax or
-          accounting rules require it.
+          Account and synced learning data are kept until you delete your
+          account. Local data remains until you clear it, delete the account
+          from that device, or uninstall. AI providers process prompts to
+          generate a response. Filtered diagnostics and operational
+          provider logs follow the retention periods configured for those
+          services. Backups are kept for no more than 30 days. Correspondence
+          about an account-deletion request is kept for no more than 90 days
+          after the request is completed. Purchase records, when purchases
+          become available, may be kept longer where the law requires it.
         </p>
       ),
     },
@@ -282,8 +297,16 @@ export default function LernadoPrivacyPage() {
           at {site.host}. That removes your authentication account and related
           server records we control, and clears local learning data on that
           device if you delete from the app. The website form confirms your
-          email with a one-time code, then asks why you are leaving. Those
-          answers are stored without your email or account id. You can also
+          email with a one-time code, then asks why you are leaving. The survey
+          database stores those answers without your email or account id.
+          A deletion notification sent to the developer includes the account
+          email, account id, and selected reasons. Copies of that correspondence
+          may remain for up to 90 days after the request is completed; backup
+          copies may remain for up to 30 days after the live account is removed.
+          Card-error reports may remain after the account link is removed;
+          avoid including personal information in report comments.
+          Deleting on the website does not directly erase an offline device;
+          clear its app data or uninstall to remove its local copy. You can also
           email{" "}
           <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
           After deletion you can register again with the same email if you
