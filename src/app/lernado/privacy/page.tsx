@@ -62,9 +62,10 @@ export default function LernadoPrivacyPage() {
               your Google account has one.
             </li>
             <li>
-              <strong>Purchase data:</strong> whether you have an active paid
-              plan, and when it expires. Card numbers and billing addresses go
-              to the store or payment provider, not to us.
+              <strong>Future purchase data:</strong> when paid features launch,
+              whether you have an active paid plan and when it expires. Purchases
+              are unavailable during closed testing. Card numbers and billing
+              addresses will go to the store or payment provider, not to us.
             </li>
             <li>
               <strong>Learning data:</strong> progress, XP, streaks, daily
@@ -134,7 +135,7 @@ export default function LernadoPrivacyPage() {
             provide training, dictionaries, translations, sentence checking, and
             mini-dialogs;
           </li>
-          <li>unlock and maintain paid features you buy;</li>
+          <li>unlock and maintain paid features if purchases become available;</li>
           <li>operate, maintain, and improve the app;</li>
           <li>
             send you service messages needed to run your account, such as
