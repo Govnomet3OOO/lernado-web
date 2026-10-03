@@ -37,10 +37,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="flex min-h-full flex-col font-sans">
+      <body className="isolate flex min-h-full flex-col font-sans">
         <SkyDecorations />
         <SiteHeader />
-        <main className="relative flex-1">{children}</main>
+        <main className="pointer-events-none relative z-0 flex-1 [&>*]:pointer-events-auto">
+          {children}
+        </main>
         <SiteFooter />
       </body>
     </html>

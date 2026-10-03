@@ -193,14 +193,12 @@ html[data-theme="dark"] .theme-sun {
 
 html.theme-to-dark[data-theme="dark"] .theme-sun {
   visibility: visible;
-  z-index: 50;
   pointer-events: none;
   animation: sun-fly-away 1.05s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 html.theme-to-light[data-theme="light"] .theme-sun {
   visibility: visible;
-  z-index: 50;
   pointer-events: none;
   animation: sun-enter 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
