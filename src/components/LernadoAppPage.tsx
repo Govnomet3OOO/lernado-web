@@ -61,6 +61,16 @@ export function LernadoAppPage() {
         <button type="button" className={`${storeButtonClass} mt-8`}>
           {product.statusLabel}
         </button>
+        {product.testHref ? (
+          <p className="mt-5 text-sm text-muted">
+            <Link
+              href={product.testHref}
+              className="font-semibold text-accent transition-colors hover:text-primary"
+            >
+              Join the closed test
+            </Link>
+          </p>
+        ) : null}
       </section>
 
       <div className="mt-14 grid items-start gap-16 sm:mt-16 sm:grid-cols-2 sm:gap-12">
@@ -138,10 +148,20 @@ export function LernadoAppPage() {
         <button type="button" className={`${storeButtonClass} mt-8`}>
           {product.statusLabel}
         </button>
+        {product.testHref ? (
+          <p className="mt-5 text-sm text-muted">
+            <Link
+              href={product.testHref}
+              className="font-semibold text-accent transition-colors hover:text-primary"
+            >
+              Join the closed test
+            </Link>
+          </p>
+        ) : null}
       </section>
 
       <nav
-        aria-label={`${product.name} legal`}
+        aria-label={`${product.name} links`}
         className="mt-16 flex flex-wrap gap-5 border-t border-line pt-8 text-sm font-semibold text-muted"
       >
         <Link
@@ -156,6 +176,14 @@ export function LernadoAppPage() {
         >
           Privacy Policy
         </Link>
+        {product.testHref ? (
+          <Link
+            href={product.testHref}
+            className="transition-colors hover:text-primary"
+          >
+            Closed test
+          </Link>
+        ) : null}
         {product.deleteAccountHref ? (
           <Link
             href={product.deleteAccountHref}

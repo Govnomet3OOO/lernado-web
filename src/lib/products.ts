@@ -19,6 +19,7 @@ export type Product = {
   termsHref?: string;
   privacyHref?: string;
   deleteAccountHref?: string;
+  testHref?: string;
   nameHidden?: boolean;
 };
 
@@ -37,6 +38,7 @@ export const products = {
     termsHref: "/lernado/terms",
     privacyHref: "/lernado/privacy",
     deleteAccountHref: "/lernado/delete-account",
+    testHref: "/lernado/test",
     features: [
       {
         title: "Daily repetitions",
