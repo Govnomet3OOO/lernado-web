@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { DeleteAccountForm } from "../../../components/DeleteAccountForm";
-import { products } from "../../../lib/products";
-import { site } from "../../../lib/site";
+import { DeleteAccountForm } from "../../components/DeleteAccountForm";
+import { products } from "../../lib/products";
+import { site } from "../../lib/site";
 
 const product = products.lernado;
 

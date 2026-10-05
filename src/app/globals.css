@@ -285,19 +285,6 @@ body {
     color 0.7s ease;
 }
 
-.redacted-name {
-  display: inline-block;
-  width: 5.2em;
-  height: 0.46em;
-  vertical-align: 0.08em;
-  border-radius: 2px;
-  background: #e2e8f0;
-}
-
-html[data-theme="light"] .redacted-name {
-  background: #0f172a;
-}
-
 html.theme-to-dark *,
 html.theme-to-light * {
   transition:
@@ -356,12 +343,17 @@ html.theme-to-light * {
   animation: phone-float 8.5s ease-in-out infinite;
 }
 
-.phone-shot-late {
-  animation-delay: -4.2s;
-}
-
 html[data-theme="light"] .phone-shot {
   filter: drop-shadow(0 16px 28px rgba(15, 23, 41, 0.16));
+}
+
+.phone-shot-side {
+  animation: none;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.28)) brightness(0.42);
+}
+
+html[data-theme="light"] .phone-shot-side {
+  filter: drop-shadow(0 10px 16px rgba(15, 23, 41, 0.12)) brightness(0.72);
 }
 
 @media (prefers-reduced-motion: reduce) {

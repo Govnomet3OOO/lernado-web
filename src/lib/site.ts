@@ -1,15 +1,15 @@
 export const site = {
   name: "Lernado",
-  tagline: "Language learning apps",
+  tagline: "Vocabulary Builder",
   description:
-    "Lernado makes focused apps for learning English — starting with vocabulary, then stories.",
+    "Learn English vocabulary with short daily sessions, personal dictionaries, and practice that checks your sentences.",
   host: "lernado.co",
   url: "https://lernado.co",
   operator: "the developer of Lernado, an individual based in the United States",
   contactEmail: "hello@lernado.co",
   governingLaw:
     "the laws of the United States and of the state in which the developer resides",
-  lastUpdated: "September 21, 2026",
+  lastUpdated: "October 5, 2026",
   copyrightYear: 2026,
 } as const;
 

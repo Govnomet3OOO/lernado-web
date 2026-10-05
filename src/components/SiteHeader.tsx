@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import { Logo } from "./Logo";
-import { RedactedName } from "./RedactedName";
 import { ThemeToggle } from "./ThemeToggle";
 import { productList } from "../lib/products";
 import { paths, site } from "../lib/site";
@@ -23,15 +22,14 @@ export function SiteHeader() {
           />
         </Link>
         <div className="flex items-center gap-3 sm:gap-5">
-          <nav aria-label="Apps" className="flex items-center gap-5 text-sm">
+          <nav aria-label="App" className="flex items-center gap-5 text-sm">
             {productList.map((product) => (
               <Link
                 key={product.id}
                 href={product.href}
-                aria-label={product.nameHidden ? "Upcoming app" : undefined}
                 className="text-muted transition-colors hover:text-foreground"
               >
-                {product.nameHidden ? <RedactedName /> : product.navLabel}
+                {product.navLabel}
               </Link>
             ))}
           </nav>

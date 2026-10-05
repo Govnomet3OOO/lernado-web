@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import { products } from "../../../lib/products";
-import { site } from "../../../lib/site";
+import { products } from "../../lib/products";
+import { site } from "../../lib/site";
 
 const product = products.lernado;
 

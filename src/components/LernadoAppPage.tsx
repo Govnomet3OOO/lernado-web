@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
+import { ShotCarousel } from "./ShotCarousel";
 import { products } from "../lib/products";
-import { paths } from "../lib/site";
 
 const product = products.lernado;
 
@@ -19,15 +18,6 @@ const featureMarks: Record<string, ReactNode> = {
 export function LernadoAppPage() {
   return (
     <div className="relative mx-auto w-full max-w-3xl px-5 pb-24">
-      <p className="pt-8">
-        <Link
-          href={paths.home}
-          className="text-sm font-semibold text-muted transition-colors hover:text-primary"
-        >
-          All apps
-        </Link>
-      </p>
-
       <section className="mx-auto max-w-xl pt-14 text-center sm:pt-16">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
           {product.tagline}
@@ -73,41 +63,7 @@ export function LernadoAppPage() {
         ) : null}
       </section>
 
-      <div className="mt-14 grid items-start gap-16 sm:mt-16 sm:grid-cols-2 sm:gap-12">
-        <article>
-          <PhoneShot
-            src="/lernado/word-card.png"
-            alt="A Lernado word card with pronunciation, meaning, and an example."
-            width={720}
-            height={1426}
-            priority
-          />
-          <h2 className="mt-6 text-xl font-bold tracking-[-0.03em] text-foreground">
-            Meet the word
-          </h2>
-          <p className="mt-3 max-w-sm text-sm leading-6 text-muted">
-            Sound, meaning, and a sentence to lean on — before you have to use
-            it yourself.
-          </p>
-        </article>
-
-        <article>
-          <PhoneShot
-            src="/lernado/dialogue.png"
-            alt="A Lernado dialogue where you use a new phrase in your own reply."
-            width={720}
-            height={1422}
-            late
-          />
-          <h2 className="mt-6 text-xl font-bold tracking-[-0.03em] text-foreground">
-            Then use it
-          </h2>
-          <p className="mt-3 max-w-sm text-sm leading-6 text-muted">
-            A short conversation puts the word in a real situation. You answer
-            in your own sentence.
-          </p>
-        </article>
-      </div>
+      <ShotCarousel />
 
       <p className="mx-auto mt-16 max-w-xl text-center text-[26px] font-medium leading-snug tracking-[-0.03em] text-foreground sm:mt-20 sm:text-3xl">
         A word you have used is a word you keep.
@@ -193,45 +149,6 @@ export function LernadoAppPage() {
           </Link>
         ) : null}
       </nav>
-    </div>
-  );
-}
-
-function PhoneShot({
-  src,
-  alt,
-  width,
-  height,
-  priority,
-  late,
-}: {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  priority?: boolean;
-  late?: boolean;
-}) {
-  return (
-    <div className="relative mx-auto w-full max-w-[22rem]">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-6 top-8 bottom-8 rounded-full bg-accent/15 blur-3xl"
-      />
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        priority={priority}
-        draggable={false}
-        className={[
-          "phone-shot relative z-[1] h-auto w-full",
-          late ? "phone-shot-late" : "",
-        ]
-          .filter(Boolean)
-          .join(" ")}
-      />
     </div>
   );
 }

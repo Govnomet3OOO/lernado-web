@@ -1,4 +1,4 @@
-export type ProductStatus = "coming-soon" | "in-development";
+export type ProductStatus = "coming-soon";
 
 export type ProductFeature = {
   title: string;
@@ -20,7 +20,6 @@ export type Product = {
   privacyHref?: string;
   deleteAccountHref?: string;
   testHref?: string;
-  nameHidden?: boolean;
 };
 
 export const products = {
@@ -31,14 +30,14 @@ export const products = {
     tagline: "Vocabulary Builder",
     description:
       "Learn English vocabulary with short daily sessions, personal dictionaries, and practice that checks your sentences.",
-    href: "/lernado",
+    href: "/",
     status: "coming-soon",
     statusLabel: "Google Play · Coming soon",
     packageName: "com.lernado.vocab",
-    termsHref: "/lernado/terms",
-    privacyHref: "/lernado/privacy",
-    deleteAccountHref: "/lernado/delete-account",
-    testHref: "/lernado/test",
+    termsHref: "/terms",
+    privacyHref: "/privacy",
+    deleteAccountHref: "/delete-account",
+    testHref: "/test",
     features: [
       {
         title: "Daily repetitions",
@@ -51,30 +50,6 @@ export const products = {
       {
         title: "Spoken practice",
         body: "Write sentences, get feedback, and run short mini-dialogs around the words you are learning.",
-      },
-    ],
-  },
-  stories: {
-    id: "stories",
-    name: "Upcoming app",
-    navLabel: "Upcoming app",
-    nameHidden: true,
-    description: "Learn English through stories.",
-    href: "/stories",
-    status: "in-development",
-    statusLabel: "In development",
-    features: [
-      {
-        title: "A story that waits",
-        body: "It does not move until you do.",
-      },
-      {
-        title: "English in the plot",
-        body: "The language is the world you walk through, not a list on the side.",
-      },
-      {
-        title: "More than one ending",
-        body: "What you say, and which way you turn, changes the page.",
       },
     ],
   },
