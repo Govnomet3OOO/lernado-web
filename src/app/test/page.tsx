@@ -164,43 +164,6 @@ export default function LernadoClosedTestPage() {
         ))}
       </ol>
 
-      <section className="mt-12 overflow-hidden rounded-2xl border border-accent/30 bg-card">
-        <div className="bg-[linear-gradient(115deg,var(--primary),#042033)] px-5 py-3.5 text-white sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/75">
-            For active testers
-          </p>
-          <h2 className="mt-1 text-2xl font-extrabold tracking-[-0.04em]">
-            Six months free
-          </h2>
-        </div>
-        <div className="px-5 py-4 sm:px-6">
-          <p className="text-sm leading-6 text-foreground">
-            Active testers get a one-time promo code for six months of the
-            subscription, free. I email it to the same Google account, if you
-            are still in the testers group. The code works once the app is
-            released. During the test it is free anyway.
-          </p>
-          <p className="mt-3 text-sm font-semibold text-foreground">
-            Active means both of these:
-          </p>
-          <ul className="mt-2 space-y-2 text-sm leading-6 text-muted">
-            <li>
-              <span className="font-semibold text-foreground">
-                Use the app for real.{" "}
-              </span>
-              A few times a week, over a couple of weeks. Not every day, and
-              not a quick open-and-close.
-            </li>
-            <li>
-              <span className="font-semibold text-foreground">
-                Send at least one note.{" "}
-              </span>
-              A problem, a review, or a suggestion, from the app or by email.
-            </li>
-          </ul>
-        </div>
-      </section>
-
       <div className="mt-14 border-t border-line pt-10">
         <section className="max-w-xl">
           <h2 className="text-xl font-bold tracking-[-0.03em] text-foreground">
